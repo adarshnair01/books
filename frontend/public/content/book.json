@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "The \"Attention\" Deficit Disorder",
+    "filename": "chapter_1.md"
+  },
+  {
+    "id": 2,
+    "title": "The Transformer Blueprint",
+    "filename": "chapter_2.md"
+  },
+  {
+    "id": 3,
+    "title": "The Secret Sauce of Tokens & Embeddings",
+    "filename": "chapter_3.md"
+  },
+  {
+    "id": 4,
+    "title": "Prompt Engineering The Art of Ghostwriting",
+    "filename": "chapter_4.md"
+  },
+  {
+    "id": 5,
+    "title": "RAG Giving the Brain a Library Card",
+    "filename": "chapter_5.md"
+  },
+  {
+    "id": 6,
+    "title": "Pre-training & Scaling Laws",
+    "filename": "chapter_6.md"
+  },
+  {
+    "id": 7,
+    "title": "Fine-Tuning & LoRA",
+    "filename": "chapter_7.md"
+  },
+  {
+    "id": 8,
+    "title": "RLHF & DPO",
+    "filename": "chapter_8.md"
+  },
+  {
+    "id": 9,
+    "title": "Model Quantization & Distillation",
+    "filename": "chapter_9.md"
+  },
+  {
+    "id": 10,
+    "title": "Multimodal GenAI",
+    "filename": "chapter_10.md"
+  },
+  {
+    "id": 11,
+    "title": "Agentic AI When LLMs Get \"Hands\"",
+    "filename": "chapter_11.md"
+  },
+  {
+    "id": 12,
+    "title": "The OpenClaw Era",
+    "filename": "chapter_12.md"
+  },
+  {
+    "id": 13,
+    "title": "Multi-Agent Systems",
+    "filename": "chapter_13.md"
+  },
+  {
+    "id": 14,
+    "title": "Agentic RAG",
+    "filename": "chapter_14.md"
+  },
+  {
+    "id": 15,
+    "title": "Reasoning Models",
+    "filename": "chapter_15.md"
+  },
+  {
+    "id": 16,
+    "title": "LLMOps & Evaluation",
+    "filename": "chapter_16.md"
+  },
+  {
+    "id": 17,
+    "title": "Security & Jailbreaking",
+    "filename": "chapter_17.md"
+  },
+  {
+    "id": 18,
+    "title": "The AGI Horizon",
+    "filename": "chapter_18.md"
+  }
+]

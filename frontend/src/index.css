@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #000000;
+  --color-paper: #ffffff;
+  --color-ink: #171717;
+  --color-ink-muted: #737373;
+  --color-border: #e2e2e2;
+
+  --font-serif: "Newsreader", "Georgia", serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+  html {
+    @apply antialiased scroll-smooth;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-white dark:bg-[#050505] text-neutral-900 dark:text-neutral-100 font-sans transition-colors duration-500 overflow-x-hidden;
+  }
+
+  /* Custom scrollbar - visible but subtle */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-neutral-200 dark:bg-neutral-800 rounded-full;
+  }
+}
+
+@layer components {
+
+  /* Editorial Reading Container */
+  .reading-container {
+    @apply w-full max-w-5xl mx-auto px-6 sm:px-12 md:px-20 pt-32 pb-64;
+  }
+
+  /* Content Typography */
+  .prose {
+    @apply font-serif text-[1.1rem] sm:text-[1.2rem] md:text-[1.3rem] leading-[1.75] text-neutral-800 dark:text-neutral-200;
+    font-variant-numeric: oldstyle-nums;
+  }
+
+  /* Professional Drop Cap - Apply only to the first paragraph of content */
+  .drop-cap p:first-of-type::first-letter {
+    @apply float-left text-[3.5em] font-bold pr-3 pt-1 leading-[0.8] text-black dark:text-white font-sans;
+  }
+
+  .prose h1 {
+    @apply font-sans font-bold text-2xl sm:text-4xl text-center mb-12 mt-20 leading-tight tracking-tight text-black dark:text-white;
+  }
+
+  .prose h2 {
+    @apply font-sans font-bold text-xl sm:text-2xl mt-16 mb-6 tracking-tight text-neutral-900 dark:text-neutral-50;
+  }
+
+  .prose h3 {
+    @apply font-sans font-semibold text-lg sm:text-xl mt-10 mb-4 tracking-tight text-neutral-800 dark:text-neutral-100;
+  }
+
+  .prose p {
+    @apply mb-10;
+  }
+
+  /* Code Fragments */
+  .prose pre {
+    @apply bg-neutral-50 dark:bg-neutral-900/50 p-6 sm:p-8 rounded-2xl my-12 overflow-x-auto border border-neutral-200/50 dark:border-neutral-800/50 font-sans text-sm;
+  }
+
+  .prose code {
+    @apply font-mono text-[0.85em] bg-neutral-100 dark:bg-neutral-800 px-1.5 py-0.5 rounded text-black dark:text-white;
+  }
+
+  /* UI Layering */
+  .floating-bar {
+    @apply fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center gap-1 p-1 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-3xl border border-neutral-200/50 dark:border-neutral-800/50 rounded-full shadow-lg;
+  }
+
+  .action-btn {
+    @apply p-2.5 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 text-neutral-500 hover:text-black dark:hover:text-white transition-all active:scale-95 cursor-pointer;
+  }
+
+  .library-drawer {
+    @apply fixed inset-y-0 left-0 z-[100] w-full max-w-sm bg-white dark:bg-neutral-950 p-10 flex flex-col shadow-2xl;
+  }
+}
+
+/* Animations */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-reveal {
+  animation: reveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Sidebar Item Styling - Fixed the 'group' issue */
+.toc-card {
+  @apply py-5 border-b border-neutral-50 dark:border-neutral-900/50 flex items-start gap-4 transition-all duration-300;
+}
