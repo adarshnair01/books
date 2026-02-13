@@ -37,6 +37,8 @@ jobs:
         run: |
           mkdir -p final_dist/genai
           cp -r frontend/dist/* final_dist/genai/
+          cp frontend/bookshelf.html final_dist/index.html
+          touch final_dist/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
