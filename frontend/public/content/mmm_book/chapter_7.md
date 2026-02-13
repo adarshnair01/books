@@ -6,7 +6,7 @@ That, my friends, is the magic (and often overlooked science) of **Adstock**.
 
 Imagine dropping a pebble into a perfectly still pond. *Splash!* You see the immediate impact, right? That's your instant sale. But then, what happens? Ripples spread out, gently nudging the water's surface long after the pebble has sunk. Or think about shouting into a cavern. Your voice booms, then fades, but for a while, you can still hear the sound bouncing off the walls – an echo that hangs in the air.
 
-![Diagram 1](images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_1_diagram_1.png)
+![Diagram 1](/images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_1_diagram_1.png)
 
 That ripple, that echo, is Adstock. It's the fancy term for the **carryover effect** of advertising. It means that the exposure someone had to your ad today might not make them buy something *today*, but it plants a seed. It builds brand awareness, creates a positive association, or simply keeps your product top-of-mind. Then, a week later, or even a month later, when they *do* need something you offer, guess whose brand pops into their head first? Yours!
 
@@ -28,7 +28,7 @@ Alright, so we've established that ads have a lingering echo, right? They don't 
 
 Think of it like this: your brain isn't a vending machine. You don't just insert an ad-coin and get a product out. Instead, it's more like a very sophisticated (and sometimes very stubborn) garden. You plant a seed (that's your ad), but it takes time, water, and sunshine for it to grow into a beautiful, ripe decision. That "lag" between seeing an ad and making a purchase is where all the magic – and the psychology – happens.
 
-![Diagram 2](images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_2_diagram_2.png)
+![Diagram 2](/images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_2_diagram_2.png)
 
 Let's dig into the dirt (pun intended!) to see what makes those seeds sprout:
 
@@ -47,7 +47,7 @@ Nope! While ads leave a lasting impression, that impression isn't static. It fad
 
 Think of it like this: You take a super-bright photo with a flash. For a split second, everything is intensely illuminated. Then, the flash is gone, but your eyes still register a brighter scene for a moment, slowly returning to normal. That initial flash is your ad going live, and the gradual return to 'normal' is the ad's impact decaying.
 
-![Diagram 3](images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_3_diagram_3.png)
+![Diagram 3](/images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_3_diagram_3.png)
 
 This graph visually represents how an ad's impact starts strong and then gradually tapers off. It's not a sudden cliff-drop; it's a graceful, predictable decline. And to make this "graceful decline" even more useful, we introduce a concept borrowed from our science-y friends: **Half-Life**.
 
@@ -85,7 +85,7 @@ Whoa, hold your horses! Let's unpack those squiggly letters:
 *   **`θ` (Theta - Initial Impact Factor):** This little guy (pronounced "THAY-tah") represents how much of your *current* ad spend `S_t` actually contributes to Adstock *immediately*. Think of it as a "freshness" factor. If `θ` is 1, all your current spend has an immediate impact. If it's 0.5, only half does, perhaps because people need a moment to process it. It's between 0 and 1.
 *   **`α` (Alpha - Decay Rate / Carryover Rate):** Ah, our old friend, the decay rate! This is the percentage of *previous* Adstock (`A_{t-1}`) that *carries over* into the current period. It's the "linger" factor. If `α` is 0.8, it means 80% of yesterday's ad impact is still around today. If `α` is 0.1, then 90% vanished overnight – ouch! Like `θ`, it's also between 0 and 1. The higher the `α`, the longer your ad's echo lasts.
 
-![Diagram 4](images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_4_diagram_4.png)
+![Diagram 4](/images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_4_diagram_4.png)
 
 So, in plain English, the Adstock you have right now (`A_t`) is a combination of the immediate punch from your current ads (`θ * S_t`) AND the leftover goodness from all your *previous* advertising efforts that are still echoing (`α * A_{t-1}`).
 
@@ -97,7 +97,7 @@ Alright, so we've met the Geometric Decay Model and its star parameters, `theta`
 
 Finding the perfect `alpha` is a bit like tuning a guitar. You can start with a rough guess, but to get that sweet, sweet harmony, you need a mix of experience, a good ear, and sometimes, a fancy digital tuner. For `alpha`, it's a blend of industry wisdom, expert intuition, and hardcore data crunching.
 
-![Diagram 5](images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_5_diagram_5.png)
+![Diagram 5](/images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_5_diagram_5.png)
 
 Let's explore how we tune this crucial parameter:
 
@@ -121,7 +121,7 @@ Imagine you're trying to light a campfire.
 *   Some kindling (like dry grass or paper) catches fire almost instantly. That's a **high `theta`** ad – immediate impact, like a direct-response search ad.
 *   Other kindling (like slightly damp twigs or a bigger log) needs a bit more fanning, a bit more time, and maybe repeated attempts to really catch. That's a **lower `theta`** ad – its initial impact is less direct or takes a moment to build, implying an initial lag before it truly contributes.
 
-![Diagram 6](images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_6_diagram_6.png)
+![Diagram 6](/images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_6_diagram_6.png)
 
 ### Different Ads, Different Sparks
 
@@ -155,7 +155,7 @@ Sometimes, the real world throws us curveballs, and our simple `alpha` and `thet
 
 Think of it this way: the Geometric Decay Model is like drawing a simple, straight line to represent the path of a bouncing ball. It's a good approximation. But in reality, a ball bounces, spins, and might even hit an obstacle, creating a much more complex trajectory. When we need to model those nuanced bounces and spins, we need more sophisticated tools.
 
-![Diagram 7](images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_7_diagram_7.png)
+![Diagram 7](/images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_7_diagram_7.png)
 
 So, when do we bring out the big guns?
 
@@ -181,7 +181,7 @@ Imagine you're trying to fill a bucket with water.
 *   As you keep pouring, the water level rises steadily. Each additional drop still contributes, but the *incremental* increase in water level feels a little less dramatic than that very first drop. This is where your ad spend is still effective, but each new dollar is working a *bit* less hard than the one before it.
 *   Then, you reach a point where the bucket is completely full. You keep pouring water in, but what happens? It just spills over the sides! You're adding more, but the water *in the bucket* isn't increasing *at all*. That, my friend, is **saturation**. You've reached everyone you can, or you've bombarded them so much that they've tuned you out. Any additional ad spend at this point is just wasted water.
 
-![Diagram 8](images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_8_diagram_8.png)
+![Diagram 8](/images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_8_diagram_8.png)
 
 ### Why Saturation Matters (and How to Avoid Drowning Your Budget)
 
@@ -207,7 +207,7 @@ Imagine you're running a lemonade stand.
 
 See what happened there? Each *additional* dollar you spent brought in *less* additional revenue. That's MROI in action! It's not about the *total* return on your *entire* ad budget; it's about the extra return you get from spending just **one more dollar**.
 
-![Diagram 9](images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_9_diagram_9.png)
+![Diagram 9](/images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_9_diagram_9.png)
 
 ### Why MROI is Your AI Agent's Best Friend for Optimal Allocation
 
@@ -227,7 +227,7 @@ But how do we *see* this effect? How do we pinpoint that exact moment when our a
 
 This curve is our visual guide to understanding the relationship between how much you spend on advertising and the sales (or conversions) you get in return. It's not a straight line, because life (and marketing) is rarely that simple. Instead, it typically looks like an "S" laid on its side, or perhaps more accurately, like a gently rising hill that eventually flattens out.
 
-![Diagram 10](images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_10_diagram_10.png)
+![Diagram 10](/images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_10_diagram_10.png)
 
 Let's break down this beautiful curve:
 
@@ -264,7 +264,7 @@ Let's break down these parameters, because they're the real heroes here:
     *   A **higher `n`** means a very steep, aggressive S-curve. Your sales shoot up quickly with initial spend, and then hit saturation very sharply. Think of a super-efficient ad that works wonders but then quickly runs out of new people to reach.
     *   A **lower `n`** means a gentler, more drawn-out S-curve. Your sales increase more gradually, and saturation takes longer to set in. This might be a brand-building campaign that slowly but steadily influences a wider audience.
 
-![Diagram 11](images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_11_diagram_11.png)
+![Diagram 11](/images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_11_diagram_11.png)
 
 By using this Power Curve model, our AI agents can precisely map out the saturation point for each of your ad channels. They can tell you not just *if* you're hitting saturation, but *exactly where* that sweet spot is (the `K` value) and *how aggressively* your audience responds to increased spend (the `n` value). This isn't just theory; it's the bedrock for truly intelligent budget allocation, ensuring you get the most bang for your buck without getting burned.
 
@@ -279,7 +279,7 @@ Think about trying to start a new trend, like a quirky dance move or a new slang
 
 This kind of pattern – a slow start, then rapid growth, then a plateau – is perfectly captured by the **S-Curve Effect**, often modeled using things like the **Logistic Function**. It's a slightly different flavor of saturation curve, but it's incredibly powerful for specific marketing scenarios.
 
-![Diagram 12](images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_12_diagram_12.png)
+![Diagram 12](/images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_12_diagram_12.png)
 
 ### When the S-Curve is Your Best Friend
 
@@ -298,7 +298,7 @@ Alright, we've peered at the Saturation Response Curve, and we've even met its m
 
 Estimating these saturation parameters is a bit like being a detective. You gather clues, consult experts, and use sophisticated tools to piece together the truth. It's a fantastic blend of art (human intuition and market knowledge) and science (data-driven modeling).
 
-![Diagram 13](images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_13_diagram_13.png)
+![Diagram 13](/images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_13_diagram_13.png)
 
 Let's break down the detective work:
 
@@ -331,7 +331,7 @@ Imagine you're trying to build the most magnificent sandcastle ever.
 *   But dry sand is useless for building. You need to add **water** to make it moldable and sticky. This "wetting" process, where the sand becomes usable and its effect *carries over* to the next scoop, is like our **Adstock transformation**. The more effective the wetting (higher alpha), the better the sand holds together. The immediate stickiness (theta) also plays a role. Now you have *effective, moldable sand*.
 *   Now, you start building your castle. The first few scoops of *wet sand* make a huge difference to the stability and height of your turrets. But after a while, adding more and more wet sand to the *same* turret won't make it much taller or stronger; it just piles up and starts to sag or spill. This is **saturation**. There's a limit to how much wet sand a particular section of your castle can effectively hold.
 
-![Diagram 14](images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_14_diagram_14.png)
+![Diagram 14](/images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_14_diagram_14.png)
 
 This analogy perfectly illustrates the **Grand Unification** – how we combine Adstock and Saturation within a single Marketing Mix Model (MMM) equation. We don't just apply them randomly; there's a specific, logical order:
 
@@ -380,7 +380,7 @@ Let's break down this powerful equation:
 *   **`Coefficient_TV`, `Coefficient_Social`, `Coefficient_Search`:** These are the golden nuggets, the "secret sauce" of our recipe! These are the numbers that our AI agent *learns* from your historical data. Each coefficient tells you: "For every one unit of *Saturated Adstock* from this channel, how many units of sales (or conversions) do we get?" A higher coefficient means that channel is more potent *after* accounting for its carryover and saturation effects.
 *   **`Other_Factors`:** We can also include other things that influence sales, like seasonality (hello, holiday shopping!), competitor activity, promotions, or even external factors like the economy.
 
-![Diagram 15](images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_15_diagram_15.png) -> "Saturated TV" -> [Multiply by Coefficient_TV] -> "TV Sales Contribution"
+![Diagram 15](/images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_15_diagram_15.png) -> "Saturated TV" -> [Multiply by Coefficient_TV] -> "TV Sales Contribution"
 Input B: "Raw Social Spend" -> [Adstock & Saturation Transform] -> "Saturated Social" -> [Multiply by Coefficient_Social] -> "Social Sales Contribution"
 Input C: "Raw Search Spend" -> [Adstock & Saturation Transform] -> "Saturated Search" -> [Multiply by Coefficient_Search] -> "Search Sales Contribution"
 All "Sales Contributions" + "Baseline Sales" + "Other Factors" -> [Summation] -> "Total Predicted Sales"]
@@ -408,7 +408,7 @@ Think of it like being a seasoned sailor. You've got your charts (your MMM), you
 3.  **Overfitting (The Too-Tight Sweater):** Your AI agent, in its eagerness, might build a model that's *too* specific to your past data, capturing every tiny fluctuation (even random noise). This is like buying a sweater that fits perfectly *today*, but if you eat a big meal or lose a pound, it no longer fits. An overfit model won't generalize well to predict future outcomes. We want a model that's just right, not too tight!
 4.  **The Iterative Dance (It's Never "Done"):** An MMM isn't a one-and-done project. Markets change, consumer behavior shifts, and new channels emerge. Your model needs constant monitoring, re-evaluation, and fine-tuning. It's an ongoing conversation with your data, not a monologue.
 
-![Diagram 16](images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_16_diagram_16.png)
+![Diagram 16](/images/mmm_book/Chapter_7_MMMs_Secret_Sauce_Adstock__Saturation/diagram_16_diagram_16.png)
 
 ### Channel-Specific Considerations: Not All Waves Are the Same!
 
