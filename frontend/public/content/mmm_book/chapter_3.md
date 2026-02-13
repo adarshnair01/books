@@ -635,7 +635,7 @@ Here are the blueprints for your data vault:
     *   **The Idea:** Beyond the data dictionary, document the *processes* you used. How was the data collected? What imputation methods were used? Which features were engineered, and how?
     *   **Why it's great:** Ensures reproducibility, helps debug issues, and allows others to build upon your work without starting from scratch.
 
-[DIAGRAM: A sturdy, metallic vault door with a large lock. On the door, labels are visible: "NAMING CONVENTIONS", "VERSION CONTROL", "DATA DICTIONARY", "DOCUMENTATION". Inside the vault, rows of neatly organized, labeled data files are stacked on shelves, glowing faintly. A small AI agent is happily retrieving a labeled file from a shelf.]
+![Diagram 13](/images/mmm_book/Chapter_3_Data_Data_Everywhere_Getting_Your_Ingredients_Ready/diagram_13_diagram_13.png)
 
 Building your data vault isn't the most glamorous part of the AI journey, but it's arguably the most important for long-term success. Without it, your brilliant MMM insights could turn into a pile of digital dust, and your AI agent will be left rummaging through unidentifiable junk. Invest in your data infrastructure now, and your future self (and your AI agent!) will thank you.
 
