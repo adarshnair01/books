@@ -1,0 +1,87 @@
+[
+  {
+    "id": 1,
+    "title": "Welcome to the Data Jungle Why Statistics is Your ML Superpower",
+    "filename": "chapter_1.md"
+  },
+  {
+    "id": 2,
+    "title": "Peeking at Your Data's Personality Descriptive Statistics",
+    "filename": "chapter_2.md"
+  },
+  {
+    "id": 3,
+    "title": "Drawing Pictures with Numbers Data Visualization",
+    "filename": "chapter_3.md"
+  },
+  {
+    "id": 4,
+    "title": "The Odds Are Ever In Your Favor Basic Probability",
+    "filename": "chapter_4.md"
+  },
+  {
+    "id": 5,
+    "title": "The Unpredictable Predictable: Why Life's a Dice Roll (and How to Cheat It)",
+    "filename": "chapter_5.md"
+  },
+  {
+    "id": 6,
+    "title": "The Bell Curve and Beyond Continuous Probability Distributions",
+    "filename": "chapter_6.md"
+  },
+  {
+    "id": 7,
+    "title": "Sampling the Soup Why a Spoonful is Enough",
+    "filename": "chapter_7.md"
+  },
+  {
+    "id": 8,
+    "title": "Guessing Games with Confidence Point Estimates & Intervals",
+    "filename": "chapter_8.md"
+  },
+  {
+    "id": 9,
+    "title": "The Verdict is In! Hypothesis Testing Fundamentals",
+    "filename": "chapter_9.md"
+  },
+  {
+    "id": 10,
+    "title": "Comparing Apples to Oranges (and Pears) Tests for Differences",
+    "filename": "chapter_10.md"
+  },
+  {
+    "id": 11,
+    "title": "Are They Related? Correlation and Covariance",
+    "filename": "chapter_11.md"
+  },
+  {
+    "id": 12,
+    "title": "Predicting the Future (Linearly) Simple & Multiple Regression",
+    "filename": "chapter_12.md"
+  },
+  {
+    "id": 13,
+    "title": "Classifying with Statistics Logistic Regression",
+    "filename": "chapter_13.md"
+  },
+  {
+    "id": 14,
+    "title": "The Art of Resampling Bootstrapping and Cross-Validation",
+    "filename": "chapter_14.md"
+  },
+  {
+    "id": 15,
+    "title": "Bias, Variance, and the Goldilocks Zone",
+    "filename": "chapter_15.md"
+  },
+  {
+    "id": 16,
+    "title": "Feature Finesse & Selection Statistical Methods",
+    "filename": "chapter_16.md"
+  },
+  {
+    "id": 17,
+    "title": "A/B Testing The Data Scientist's Experiment",
+    "filename": "chapter_17.md"
+  }
+]

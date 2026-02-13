@@ -11,6 +11,21 @@ class BookAgents:
             google_api_key=os.getenv("GEMINI_API_KEY")
         )
 
+    def book_architect(self):
+        return Agent(
+            role='Book Architect',
+            goal='Design a comprehensive, logical, and engaging 15-20 chapter book outline based on a title and description.',
+            backstory=(
+                "You are a world-class book editor and structural designer. You know how to take a simple "
+                "idea and turn it into a journey. You design syllabi that build concepts progressively, "
+                "ensuring each chapter flows perfectly into the next. Your specialty is technical but "
+                "accessible books in the 'Head First' style."
+            ),
+            llm=self.llm,
+            verbose=True,
+            allow_delegation=False
+        )
+
     def content_strategist(self):
         return Agent(
             role='Content Strategist',

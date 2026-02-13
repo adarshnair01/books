@@ -1,0 +1,17 @@
+[
+  {
+    "id": "gen_ai",
+    "title": "Untitled Book",
+    "path": "gen_ai"
+  },
+  {
+    "id": "statistics_book",
+    "title": "Statistics for MLE",
+    "path": "statistics_book"
+  },
+  {
+    "id": "mmm_book",
+    "title": "Media Optimization",
+    "path": "mmm_book"
+  }
+]
