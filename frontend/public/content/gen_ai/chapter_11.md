@@ -118,12 +118,8 @@ This, my friends, is where the **API Gateway** (or more accurately, the *descrip
 
 When we talk about how an LLM "sees" and "understands" tools, we're talking about presenting these tools as structured data. The most common format for this is **JSON (JavaScript Object Notation)**, which is basically a way to organize data in a human-readable, yet machine-parseable format. It's like giving the LLM a highly organized, bullet-pointed list of capabilities for each tool.
 
-**![Diagram 5](/images/gen_ai/Chapter_11_Agentic_AI_When_LLMs_Get_Hands/diagram_5_diagram_5.png)}
-    },
-    "required": ["location"]
-  }
-}
-```
+![Diagram 5](images/Chapter_11_Agentic_AI_When_LLMs_Get_Hands/diagram_5_diagram_5.png)
+
 Arrows point from "description" to the LLM's understanding of "what it does," and from "parameters" to its understanding of "what info I need."]**
 
 This "instruction manual" tells the LLM everything it needs to know:
