@@ -31,27 +31,34 @@ const Bookshelf = ({ books, theme, setTheme }) => {
             onClick={() => navigate(`/${book.id}`)}
             className="group relative h-[500px] bg-white dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer flex flex-col justify-end p-10"
           >
-            <div className="absolute top-0 left-0 w-full h-3/5 bg-neutral-50 dark:bg-neutral-800/50 flex items-center justify-center group-hover:bg-neutral-100 dark:group-hover:bg-neutral-800 transition-all duration-700 overflow-hidden">
+            <div className={`absolute inset-0 flex items-center justify-center transition-all duration-700 overflow-hidden ${book.cover ? '' : 'bg-neutral-50 dark:bg-neutral-800/50'}`}>
               {book.cover ? (
                 <img
                   src={`${import.meta.env.BASE_URL}${book.cover}`}
                   alt={book.title}
-                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-1000"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000"
                 />
               ) : (
                 <Bookmark className="opacity-10 group-hover:opacity-30 group-hover:scale-110 transition-all duration-500" size={120} strokeWidth={0.5} />
               )}
             </div>
-            <div className="z-10">
-              <h2 className="font-serif text-3xl leading-tight mb-4 group-hover:italic transition-all">
-                {book.title}
-              </h2>
-              <div className="flex items-center gap-4 opacity-30 text-[9px] uppercase tracking-[0.3em] font-bold group-hover:opacity-60 transition-opacity">
-                <span>Volume I</span>
-                <div className="w-8 h-[1px] bg-current" />
-                <span>Begin Reading</span>
+
+            {!book.cover ? (
+              <div className="z-10 relative">
+                <h2 className="font-serif text-3xl leading-tight mb-4 group-hover:italic transition-all">
+                  {book.title}
+                </h2>
+                <div className="flex items-center gap-4 opacity-30 text-[9px] uppercase tracking-[0.3em] font-bold group-hover:opacity-60 transition-opacity">
+                  <span>Volume I</span>
+                  <div className="w-8 h-[1px] bg-current" />
+                  <span>Begin Reading</span>
+                </div>
               </div>
-            </div>
+            ) : (
+              <div className="z-20 relative opacity-0 group-hover:opacity-100 transition-all duration-500 bg-white/20 dark:bg-black/20 backdrop-blur-md p-6 -mx-10 -mb-10 text-center border-t border-white/10">
+                <span className="text-[9px] uppercase tracking-[0.5em] font-bold text-neutral-900 dark:text-white">Open Manuscript</span>
+              </div>
+            )}
           </motion.div>
         ))}
         {books.length === 0 && (
