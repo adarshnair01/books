@@ -67,6 +67,7 @@ const Reader = ({ theme, setTheme, fontSize, setFontSize }) => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isUIVisible, setIsUIVisible] = useState(true);
   const [bookTitle, setBookTitle] = useState('');
+  const [bookPath, setBookPath] = useState('');
   const [hasStartedReading, setHasStartedReading] = useState(false);
 
   // 1. Load Book Index
@@ -79,7 +80,9 @@ const Reader = ({ theme, setTheme, fontSize, setFontSize }) => {
         const book = allBooks.find(b => b.id === bookId);
         if (book) {
           setBookTitle(book.title);
-          return fetch(`${import.meta.env.BASE_URL}content/${book.path}/book.json`);
+          const path = book.path || book.id;
+          setBookPath(path);
+          return fetch(`${import.meta.env.BASE_URL}content/${path}/book.json`);
         }
         throw new Error("Book not found");
       })
@@ -91,15 +94,15 @@ const Reader = ({ theme, setTheme, fontSize, setFontSize }) => {
       })
       .catch(err => {
         console.error(err);
-        navigate('/books');
+        navigate('/');
       });
   }, [bookId]);
 
   // 2. Chapter Loader
   useEffect(() => {
-    if (chapters.length > 0 && hasStartedReading) {
+    if (chapters.length > 0 && hasStartedReading && bookPath) {
       setLoading(true);
-      fetch(`${import.meta.env.BASE_URL}content/${bookId}/${chapters[currentChapterIndex].filename}`)
+      fetch(`${import.meta.env.BASE_URL}content/${bookPath}/${chapters[currentChapterIndex].filename}`)
         .then(res => res.text())
         .then(text => {
           setContent(text);
@@ -108,7 +111,7 @@ const Reader = ({ theme, setTheme, fontSize, setFontSize }) => {
         })
         .catch(err => console.error("Chapter load failed:", err));
     }
-  }, [currentChapterIndex, chapters, bookId, hasStartedReading]);
+  }, [currentChapterIndex, chapters, bookPath, hasStartedReading]);
 
   // Scroll Tracking
   useEffect(() => {
@@ -212,7 +215,24 @@ const Reader = ({ theme, setTheme, fontSize, setFontSize }) => {
             className={`prose animate-reveal ${currentChapterIndex === 0 ? 'drop-cap' : ''}`}
             style={{ fontSize: `${fontSize}px` }}
           >
-            <ReactMarkdown>{content}</ReactMarkdown>
+            <ReactMarkdown
+              components={{
+                img: ({ node, ...props }) => {
+                  const src = props.src.startsWith('/')
+                    ? `${import.meta.env.BASE_URL}${props.src.slice(1)}`
+                    : props.src;
+                  return (
+                    <img
+                      {...props}
+                      src={src}
+                      className="rounded-2xl shadow-lg my-12 border border-neutral-100 dark:border-neutral-900"
+                    />
+                  );
+                }
+              }}
+            >
+              {content}
+            </ReactMarkdown>
 
             <div className="mt-48 pt-24 border-t border-neutral-100 dark:border-neutral-900 flex flex-col items-center">
               <div className="flex items-center gap-16 sm:gap-24 mb-32">
@@ -286,7 +306,7 @@ const Reader = ({ theme, setTheme, fontSize, setFontSize }) => {
               </div>
 
               <footer className="mt-12 pt-8 border-t border-neutral-100 dark:border-neutral-900">
-                <button onClick={() => navigate('/books')} className="w-full py-4 text-[10px] uppercase tracking-[0.4em] font-bold opacity-40 hover:opacity-100 hover:text-red-500 transition-all">
+                <button onClick={() => navigate('/')} className="w-full py-4 text-[10px] uppercase tracking-[0.4em] font-bold opacity-40 hover:opacity-100 hover:text-red-500 transition-all">
                   Exit to Library
                 </button>
               </footer>
