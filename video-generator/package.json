@@ -1,0 +1,28 @@
+{
+    "name": "book-video-generator",
+    "version": "1.0.0",
+    "description": "Generate animated videos from book chapters using Remotion",
+    "main": "index.js",
+    "scripts": {
+        "start": "remotion preview src/index.tsx",
+        "build": "remotion render src/index.tsx ChapterVideo out/video.mp4",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "remotion": "^4.0.0",
+        "zod": "3.22.3"
+    },
+    "devDependencies": {
+        "@remotion/cli": "^4.0.421",
+        "@types/node": "^20.19.33",
+        "@types/react": "^18.2.0",
+        "@types/react-dom": "^18.2.0",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.9.3"
+    }
+}

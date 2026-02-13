@@ -1,6 +1,23 @@
 from crewai import Task
 
 class BookTasks:
+    def generate_outline(self, agent, title, description):
+        return Task(
+            description=(
+                f"Create a detailed 15-20 chapter outline for a book titled '{title}'. \n"
+                f"Theme/Description: {description}\n\n"
+                "The outline must follow this exact format for each chapter:\n"
+                "### Chapter N: Title\n"
+                "* **The Hook**: A brief, engaging 'Head First' style hook.\n"
+                "* **Topics**:\n"
+                "    * Topic 1\n"
+                "    * Topic 2\n\n"
+                "Ensure the chapters progress logically from foundations to advanced topics."
+            ),
+            expected_output="A full 18-chapter Markdown outline.",
+            agent=agent
+        )
+
     def expand_syllabus(self, agent, chapter_title, chapter_topics):
         return Task(
             description=(

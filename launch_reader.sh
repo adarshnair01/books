@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "🚀 Syncing chapters..."
-./venv/bin/python sync_to_web.py
+./venv/bin/python sync_to_web.py --all
 
 echo "📦 Installing reader dependencies..."
 cd frontend
