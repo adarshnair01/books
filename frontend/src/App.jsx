@@ -319,7 +319,6 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Bookshelf books={books} theme={theme} setTheme={setTheme} />} />
-      <Route path="/books" element={<Navigate to="/" replace />} />
       <Route path="/:bookId" element={<Reader theme={theme} setTheme={setTheme} fontSize={fontSize} setFontSize={setFontSize} />} />
     </Routes>
   );
