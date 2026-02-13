@@ -1,17 +1,17 @@
 [
   {
-    "id": "gen_ai",
-    "title": "Untitled Book",
+    "id": "genai",
+    "title": "Minimalist GenAI",
     "path": "gen_ai"
   },
   {
-    "id": "statistics_book",
+    "id": "statistics",
     "title": "Statistics for MLE",
     "path": "statistics_book"
   },
   {
-    "id": "mmm_book",
-    "title": "Media Optimization",
+    "id": "mmm",
+    "title": "Media Optimization (MMM)",
     "path": "mmm_book"
   }
 ]

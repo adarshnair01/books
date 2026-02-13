@@ -28,7 +28,7 @@ const Bookshelf = ({ books, theme, setTheme }) => {
           <motion.div
             key={book.id}
             whileHover={{ y: -10 }}
-            onClick={() => navigate(`/book/${book.id}`)}
+            onClick={() => navigate(`/${book.id}`)}
             className="group relative h-[500px] bg-white dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer flex flex-col justify-end p-10"
           >
             <div className="absolute top-0 left-0 w-full h-1/2 bg-neutral-50 dark:bg-neutral-800/50 flex items-center justify-center group-hover:bg-neutral-100 dark:group-hover:bg-neutral-800 transition-colors">
@@ -320,7 +320,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Bookshelf books={books} theme={theme} setTheme={setTheme} />} />
       <Route path="/books" element={<Navigate to="/" replace />} />
-      <Route path="/book/:bookId" element={<Reader theme={theme} setTheme={setTheme} fontSize={fontSize} setFontSize={setFontSize} />} />
+      <Route path="/:bookId" element={<Reader theme={theme} setTheme={setTheme} fontSize={fontSize} setFontSize={setFontSize} />} />
     </Routes>
   );
 };

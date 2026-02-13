@@ -35,9 +35,8 @@ jobs:
 
       - name: Prepare Deployment Folder
         run: |
-          mkdir -p final_dist/genai
-          cp -r frontend/dist/* final_dist/genai/
-          cp frontend/bookshelf.html final_dist/index.html
+          mkdir -p final_dist
+          cp -r frontend/dist/* final_dist/
           touch final_dist/.nojekyll
 
       - name: Upload artifact
